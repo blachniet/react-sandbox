@@ -3,10 +3,12 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import Divider from '@mui/material/Divider';
 import InputAdornment from '@mui/material/InputAdornment';
 import { useForm, Controller, useFormState } from "react-hook-form";
 import InputLabel from '@mui/material/InputLabel';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import { DateTime, Duration } from 'luxon';
 import { useState } from 'react';
 import Schedule from '@mui/icons-material/Schedule';
@@ -178,6 +180,12 @@ function App() {
           You have <strong>{remaining?.toFormat("h'h'm'm'")}</strong> left to work. You will be done at <strong>{doneAt?.toLocaleString(DateTime.TIME_SIMPLE)}</strong>.
         </Typography>
       ) : ''}
+      <Box py={2}>
+        <Divider />
+      </Box>
+      <Typography align="center">
+        Coypright © <Link href="https://blachniet.com">Brian Lachniet</Link> 2021
+      </Typography>
     </Container>
   );
 }
