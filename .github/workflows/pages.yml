@@ -20,18 +20,5 @@ jobs:
     - name: yarn install
       run: yarn install
 
-    - name: yarn build
-      run: yarn build
-
-    # This workaround handles direct links to routes other than '/'.
-    - name: copy index.html to 404.html
-      run: cp -f build/index.html build/404.html
-
-    - name: Deploy to GitHub Pages
-      if: success()
-      uses: crazy-max/ghaction-github-pages@v2
-      with:
-        target_branch: gh-pages
-        build_dir: build
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: yarn run deploy
+      run: yarn run deploy
