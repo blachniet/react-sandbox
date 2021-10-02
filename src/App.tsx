@@ -60,6 +60,7 @@ function App() {
               type="number"
               error={!!errors.targetHours}
               helperText={errors.targetHours?.message}
+              onFocus={e => e.target.select()}
               sx={{width: '10ch'}}
               InputProps={{
                 endAdornment: <InputAdornment position="end">h</InputAdornment>,
@@ -80,6 +81,7 @@ function App() {
               type="number"
               error={!!errors.targetMinutes}
               helperText={errors.targetMinutes?.message}
+              onFocus={e => e.target.select()}
               sx={{width: '10ch'}}
               InputProps={{
                 endAdornment: <InputAdornment position="end">m</InputAdornment>,
@@ -102,6 +104,7 @@ function App() {
               type="number"
               error={!!errors.workedHours}
               helperText={errors.workedHours?.message}
+              onFocus={e => e.target.select()}
               sx={{width: '10ch'}}
               InputProps={{
                 endAdornment: <InputAdornment position="end">h</InputAdornment>,
@@ -122,6 +125,7 @@ function App() {
               type="number"
               error={!!errors.workedMinutes}
               helperText={errors.workedMinutes?.message}
+              onFocus={e => e.target.select()}
               sx={{width: '10ch'}}
               InputProps={{
                 endAdornment: <InputAdornment position="end">m</InputAdornment>,
@@ -143,6 +147,7 @@ function App() {
               type="number"
               error={!!errors.breakHours}
               helperText={errors.breakHours?.message}
+              onFocus={e => e.target.select()}
               sx={{width: '10ch'}}
               InputProps={{
                 endAdornment: <InputAdornment position="end">h</InputAdornment>,
@@ -163,6 +168,7 @@ function App() {
               type="number"
               error={!!errors.breakMinutes}
               helperText={errors.breakMinutes?.message}
+              onFocus={e => e.target.select()}
               sx={{width: '10ch'}}
               InputProps={{
                 endAdornment: <InputAdornment position="end">m</InputAdornment>,
